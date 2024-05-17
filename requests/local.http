@@ -1,0 +1,36 @@
+@baseUrl = http://localhost:3333/api
+
+// health
+GET {{ baseUrl }}/health
+content-type: application/json
+
+###
+
+// auth/register
+POST {{ baseUrl }}/auth/register
+content-type: application/json
+
+{
+    "email": "teste@gmail.com",
+    "password": "12345678"
+}
+
+###
+
+// /auth/login
+POST {{ baseUrl }}/auth/login
+content-type: application/json
+
+{
+    "email": "user@gmail.com",
+    "password": "12345678"
+}
+
+
+###
+
+// /user/:id
+GET {{ baseUrl }}/user/1234
+content-type: application/json
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjEyMywiaWF0IjoxNzE1OTE2NTc3LCJleHAiOjE3MTYwMDI5Nzd9.vz8sJO5eYYOefQxWY3dJIGOCkss_lyi4R44xzC0fqMU
+
